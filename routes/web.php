@@ -14,7 +14,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('home');
+    $travels= App\Travel::all();
+    return view('home', compact('travels'));
 });
 
 Route::resource('travels', TravelController::class);
