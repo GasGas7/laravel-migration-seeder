@@ -15,6 +15,12 @@ class CreateTravelTable extends Migration
     {
         Schema::create('travel', function (Blueprint $table) {
             $table->id();
+            $table->string('image_path');
+            $table->string('city');
+            $table->text('description');
+            $table->date('departure');
+            $table->date('arrival');
+            $table->decimal('price');
             $table->timestamps();
         });
     }
