@@ -46,8 +46,9 @@ class TravelController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function show(Travel $travel)
-    {
-        return view('travels.show', compact('travels'));
+    {   
+
+        return view('travels.show', compact('travel'));
     }
 
     /**
